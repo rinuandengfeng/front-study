@@ -1,0 +1,17 @@
+
+#box {
+    width: 200px;
+    height: 200px;
+    padding: 2px; /* 内边距  作用： 填充位于内容周围的空白处*/
+    border: 1px solid black; /* 边框    作用： 边框盒子包住内容和任何填充 */
+    margin: 1px;  /* 外边距  作用： 包裹内容、内边距和边框，作为该盒子与其他元素之间的空白 */
+    /* background-color: blue; */
+}
+
+#box1{
+    width: 200px;
+    height: 200px;
+    padding: 2px;
+    border: 1px solid black;
+    margin: 20px;
+}

@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>变量</title>
+</head>
+
+<body>
+    <h1>变量学习</h1>
+</body>
+
+<script>
+    // 官方建议使用let定义变量，不要使用var
+    // var定义变量之后，还可以使用var在去定义变量
+    // let定义完变量之后，不能重复定义
+    let myName = "小米"
+    console.log(myName)
+    myname = "小明"
+    console.log(myname)
+
+    console.log(myName)
+
+    console.log(typeof myName)
+
+    myName.replace
+    // 定义常量
+    const name = "李华"
+    console.log(name)
+    // 常量修改会在控制台中报错
+    // name = "王五"  错误的写法
+
+    let animalArry = ["狗", "猫", "猪"]
+    console.log(animalArry)
+    animalArry.push("鸟")
+    console.log("从结尾添加数据后：", animalArry)
+    animalArry.pop()
+    console.log("从结尾删除数据后：", animalArry)
+    animalArry.unshift("屎")
+    console.log("从开头添加数据后：", animalArry)
+    animalArry.shift()
+    console.log("从开头删除数据后：", animalArry)
+
+    console.log(animalArry.length)
+    // 使用循环和判断
+    for (var i = 0; i < animalArry.length; i++) {
+        if (animalArry[i] === "猫") {
+            continue
+        }
+        console.log(animalArry[i])
+    }
+
+    // 创建对象
+    const person = {
+        name: "李四", // 对象属性
+        age: 18,
+        changeAge() {   // 对象方法
+            age += 1
+        }
+    }
+
+    // 自定义构造函数
+    function createPerson(name, age) {
+        const obj = {};  // 必须先创建一个空对象
+        obj.name = name;
+        obj.age = age;
+        obj.changeAge = function () {
+            obj.age += 1;
+        };
+
+        return obj;
+    }
+
+    // 使用自定义构造函数创建person对象
+    p = createPerson("王五", 20)
+    console.log("自定义构造函数创建对象", p)
+
+
+    // 创建构造函数  建议使用这种方式实现构造函数
+    function Person(name, age) {
+        this.name = name;
+        this.age = age;
+        this.changeAge = function () {
+            this.age += 1;
+        }
+    }
+    // 使用new关键字创建对象
+    p1 = new Person("赵六", 80)
+    console.log("new关键字创建构造函数", p1)
+</script>
+
+</html>

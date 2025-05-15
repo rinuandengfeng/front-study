@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>伸缩盒模型</title>
+    <style>
+        .container {
+            width: 800px;
+            /* height: 600px; */
+            background-color: aqua;
+            border: 1px solid black;
+            /* 该元素变成了伸缩容器  开启flex布局*/
+            display: flex;
+        }
+
+        .inner {
+            width: 200px;
+            height: 200px;
+            border: 1px solid black;
+            box-sizing: border-box;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="inner">1</div>
+        <div class="inner">2</div>
+        <div class="inner">3</div>
+    </div>
+</body>
+
+</html>

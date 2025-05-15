@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>布局练习</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        /* 左浮动 */
+        .leftfix {
+            float: left;
+        }
+
+        /* 右浮动 */
+        .rightfix {
+            float: right;
+        }
+
+        /* 清除浮动 */
+        .clearfix {
+            content: "";
+            display: block;
+            clear: both;
+        }
+
+        .container {
+            width: 980px;
+            margin: 0 auto;
+            text-align: center;
+        }
+
+        .header {
+            height: 80px;
+        }
+
+        .logo {
+            width: 200px;
+        }
+
+        .banner1 {
+            width: 560px;
+            margin: 0 10px;
+        }
+
+        .banner2 {
+            width: 200px;
+        }
+
+        .logo,
+        .banner1,
+        .banner2 {
+            height: 80px;
+            line-height: 80px;
+            background-color: #ccc;
+        }
+
+        .menu {
+            height: 80px;
+            line-height: 80px;
+            background-color: #ccc;
+            margin-top: 10px;
+        }
+
+        .top {
+            margin-top: 10px;
+        }
+
+        .item1,
+        .item2 {
+            width: 378px;
+            height: 198px;
+            line-height: 198px;
+            border: 1px solid black;
+        }
+
+        .item2 {
+            margin: 0 10px;
+        }
+
+        .item3,
+        .item4,
+        .item5,
+        .item6 {
+            width: 183px;
+            height: 200px;
+            line-height: 200px;
+            border: 1px solid black;
+            margin-top: 10px;
+            margin-right: 10px;
+        }
+
+        .item7,
+        .item8 {
+            width: 188px;
+            height: 198px;
+            line-height: 198px;
+            border: 1px solid black;
+            margin: 10px 0;
+        }
+
+        .footer {
+            height: 80px;
+            line-height: 80px;
+            background-color: #ccc;
+            margin-top: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <!-- 头部 -->
+        <div class="header clearfix">
+            <div class="logo leftfix">logo</div>
+            <div class="banner1 leftfix">banner1</div>
+            <div class="banner2 leftfix">banner2</div>
+        </div>
+        <!-- 菜单 -->
+        <div class="menu">菜单</div>
+        <!-- 内容 -->
+        <div class="content clearfix">
+            <!-- 左部分 -->
+            <div class="left leftfix">
+                <!-- 上 -->
+                <div class="top clearfix">
+                    <div class="item1 leftfix">栏目1</div>
+                    <div class="item2 leftfix">栏目2</div>
+                </div>
+                <div class="bottom clearfix">
+                    <div class="item3 leftfix">栏目三</div>
+                    <div class="item4 leftfix">栏目四</div>
+                    <div class="item5 leftfix">栏目五</div>
+                    <div class="item6 leftfix">栏目六</div>
+                </div>
+            </div>
+            <!-- 右部分 -->
+            <div class="right leftfix">
+                <div class="item7">栏目7</div>
+                <div class="item8">栏目8</div>
+            </div>
+        </div>
+        <!-- 页脚 -->
+        <div class="footer clearfix">页脚</div>
+    </div>
+</body>
+
+</html>
